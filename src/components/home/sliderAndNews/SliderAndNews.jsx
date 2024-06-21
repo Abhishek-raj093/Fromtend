@@ -11,7 +11,7 @@ const SliderAndNews = ({ slides }) => {
     useEffect(() => {
         const fetchNewsData = async () => {
             try {
-                const response = await axios.get("http://localhost:8000/latestnews");
+                const response = await axios.get("https://nrebackend.onrender.com/latestnews");
                 setNewsData(response.data.latestnewsdata);
             } catch (error) {
                 console.error('Error fetching news data:', error);
